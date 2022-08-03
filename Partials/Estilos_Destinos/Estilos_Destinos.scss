@@ -1,0 +1,950 @@
+@mixin Bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+// ----------------------- ✅Media query PC✅ -----------------------
+@media screen and (min-width: 1200px) {
+
+/* ✅ Inicio de grid-container ✅  */
+.grid-containerDS {
+	display: grid;
+	grid-template-areas: 
+	" header header header"
+	" menú menú menú"
+	" MainDS MainDS MainDS"
+	" footer footer footer";
+	grid-template-rows: 80px 50px 569px 90px;
+	grid-template-columns: 200px;
+
+header{
+  grid-area: header;
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+	@include Bg;
+}
+
+.menú{
+    grid-area: menú;
+	background-color: rgb(39, 38, 38);
+
+/* Inicio elementos de menú */
+.Enlaces {
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  .ElementLi {
+	display: inline;
+	padding: 15px;
+  }
+  
+  .Link{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  bottom: 1px;
+  font-family: "fuenteLink";
+  }
+  
+  .Link:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: rgb(7, 89, 241);
+	/*animacion de derecha a izquierda*/
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  .Link:hover:after {
+	/*animacion de izquierda a derecha*/
+	transform-origin: left;
+	transform: scaleX(1);
+  }
+  /* Final elementos de menú */
+}
+
+.MainDS{
+	grid-area: MainDS;
+	background-image: url("../Imagenes/FondoDestinos/FondoDestinos.png");
+	@include Bg;
+	overflow-y: scroll;
+}
+
+ footer{
+	grid-area: footer; 
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+	@include Bg;
+} 
+/* ✅ Final de grid-container ✅  */
+
+
+// ------------- ⭕MainDS⭕ -------------
+.MainDS{
+	display: grid;
+	grid-template-areas: 
+	" TituloDes"
+
+	" vacioMN2-1"
+	" Fila2MN"
+    " vacioMN2-2"
+	
+	" Fila3MN"
+    " vacioMN3-2"
+	
+	" Fila4MN"
+    " vacioMN4-2";
+	grid-template-rows: 60px 20px 280px 20px 280px 20px 280px 20px;
+	overflow-y: scroll;
+
+	.TituloDes{
+		grid-area: TituloDes;
+
+		.TituloDS{
+			font-size: 50px;
+			font-family: "fuenteC";
+		}
+	}
+
+	.vacioMN2-1{
+        grid-area: vacioMN2-1;
+	}
+
+	.Fila2MN{
+		grid-area: Fila2MN;
+	}
+
+	.vacioMN2-2{
+        grid-area: vacioMN2-2;
+	}
+
+	.Fila3MN{
+		grid-area: Fila3MN;
+	}
+
+	.vacioMN3-2{
+        grid-area: vacioMN3-2;
+	}
+
+	.Fila4MN{
+		grid-area: Fila4MN;
+	}
+
+	.vacioMN4-2{
+        grid-area: vacioMN4-2;
+	}
+}
+}
+// ------------- ⭕MainDS⭕ -------------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟐𝐌𝐍 --------
+/* ---------✅ Fila2MN ✅---------  */
+.Fila2MN{
+    display: grid;
+	grid-template-areas: " SpaceA2 Cont2 SpaceB2";
+	grid-template-columns: 1fr 5fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA2{
+	grid-area: SpaceA2;
+
+	.IMG-PC{
+		border-top-left-radius: 30px;
+	    border-bottom-left-radius: 30px;
+	}
+}
+
+.Cont2{
+    grid-area: Cont2;
+	border-radius: 50px;
+}
+
+.SpaceB2{
+	grid-area: SpaceB2;
+}
+}
+
+.Fila2MN:hover{
+    transform: scale(1.1);
+}
+/* ---------✅ Fila2MN ✅---------  */
+/* ---------⛔Cont2⛔---------  */
+.Cont2{
+    display: grid;
+	grid-template-areas: " IMG_Rec2 ColRec2";
+	grid-template-columns: 300px 831px;
+
+.IMG_Rec2{
+    grid-area: IMG_Rec2;
+	@extend .IMG-PC;
+	background-color: map-get($coloresDes, IMG-TEXT);
+	background-image: url("../Imagenes/Destinos/Brasil-IMG.png");
+	@include Bg;
+}
+
+.ColRec2{
+	grid-area: ColRec2;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont2⛔---------  */
+/* ---------🔵ColRec2🔵---------  */
+.ColRec2{
+	display: grid;
+	grid-template-areas: 
+	" TextRec2"
+	" FilaCont2"
+	" FilaLink2";
+	grid-template-rows: 50px 190px 40px;
+
+.TextRec2{
+	grid-area: TextRec2;
+	border-top-right-radius: 30px;
+	background-color: map-get($coloresDes, IMG-TEXT);
+
+	.TituloPais2{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+
+.TituloRec2{
+	text-align: center;
+	font-size: 30px;
+}
+
+.TextRecsec{
+	font-size: 20px;
+}
+
+.FilaCont2{
+	grid-area: FilaCont2;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont2{
+		font-size: 20px;
+		font-family: "fuenteP";
+	}
+}
+
+.FilaLink2{
+	grid-area: FilaLink2;
+	border-bottom-right-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio2{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟐𝐌𝐍 --------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟑𝐌𝐍--------
+/* ---------✅ Fila3MN ✅---------  */
+.Fila3MN{
+    display: grid;
+	grid-template-areas: " SpaceA3 Cont3 SpaceB3";
+	grid-template-columns: 1fr 5fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA3{
+	grid-area: SpaceA3;
+}
+
+.Cont3{
+    grid-area: Cont3;
+	border-radius: 50px;
+}
+
+.SpaceB3{
+	grid-area: SpaceB3;
+}
+}
+
+.Fila3MN:hover{
+    transform: scale(1.1);
+}
+/* ---------✅ Fila3MN ✅---------  */
+/* ---------⛔Cont3⛔---------  */
+.Cont3{
+    display: grid;
+	grid-template-areas: " IMG_Rec3 ColRec3";
+	grid-template-columns: 300px 831px;
+
+.IMG_Rec3{
+    grid-area: IMG_Rec3;
+	@extend .IMG-PC;
+	background-color: map-get($coloresDes, IMG-TEXT);
+	background-image: url("../Imagenes/Destinos/Francia-IMG.png");
+	@include Bg;
+}
+
+.ColRec3{
+	grid-area: ColRec3;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont3⛔---------  */
+/* ---------🔵ColRec3🔵---------  */
+.ColRec3{
+	display: grid;
+	grid-template-areas: 
+	" TextRec3"
+	" FilaCont3"
+	" FilaLink3";
+	grid-template-rows: 50px 190px 40px;
+
+.TextRec3{
+	grid-area: TextRec3;
+	border-top-right-radius: 30px;
+	background-color: map-get($coloresDes, IMG-TEXT);
+
+	.TituloPais3{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+
+.TituloRec3{
+	text-align: center;
+	font-size: 30px;
+}
+
+.TextRecsec3{
+	font-size: 20px;
+}
+
+.FilaCont3{
+	grid-area: FilaCont3;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont3{
+		font-size: 20px;
+		font-family: "fuenteP";
+	}
+}
+
+.FilaLink3{
+	grid-area: FilaLink3;
+	border-bottom-right-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio3{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟑𝐌𝐍--------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟒𝐌𝐍--------
+/* ---------✅ Fila4MN ✅---------  */
+.Fila4MN{
+    display: grid;
+	grid-template-areas: " SpaceA4 Cont4 SpaceB4";
+	grid-template-columns: 1fr 5fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA4{
+	grid-area: SpaceA4;
+}
+
+.Cont4{
+    grid-area: Cont4;
+	border-radius: 50px;
+}
+
+.SpaceB4{
+	grid-area: SpaceB4;
+}
+}
+
+.Fila4MN:hover{
+    transform: scale(1.1);
+}
+/* ---------✅ Fila4MN ✅---------  */
+/* ---------⛔Cont4⛔---------  */
+.Cont4{
+    display: grid;
+	grid-template-areas: " IMG_Rec4 ColRec4";
+	grid-template-columns: 300px 831px;
+
+.IMG_Rec4{
+    grid-area: IMG_Rec4;
+	@extend .IMG-PC;
+	background-color: map-get($coloresDes, IMG-TEXT);
+	background-image: url("../Imagenes/Destinos/USA-IMG.png");
+	@include Bg;
+}
+
+.ColRec4{
+	grid-area: ColRec4;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont4⛔---------  */
+/* ---------🔵ColRec4🔵---------  */
+.ColRec4{
+	display: grid;
+	grid-template-areas: 
+	" TextRec4"
+	" FilaCont4"
+	" FilaLink4";
+	grid-template-rows: 50px 190px 40px;
+
+.TextRec4{
+	grid-area: TextRec4;
+	border-top-right-radius: 30px;
+	background-color: map-get($coloresDes, IMG-TEXT);
+
+	.TituloPais4{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+
+.TituloRec4{
+	text-align: center;
+	font-size: 30px;
+}
+
+.TextRecsec4{
+	font-size: 20px;
+}
+
+.FilaCont4{
+	grid-area: FilaCont4;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont4{
+		font-size: 20px;
+		font-family: "fuenteP";
+	}
+}
+
+.FilaLink4{
+	grid-area: FilaLink4;
+	border-bottom-right-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio4{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟒𝐌𝐍--------
+}
+// ----------------------- ✅Media query PC✅ -----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------- ✅Media query MOBILE✅ -----------------------
+@media screen and (max-width: 768px) {
+
+	/* ✅ Inicio de grid-container ✅  */
+	.grid-containerDS {
+		display: grid;
+		grid-template-areas: 
+		" header header header"
+		" menú menú menú"
+		" MainDS MainDS MainDS"
+		" footer footer footer";
+		grid-template-rows: 80px 50px 569px 90px;
+		grid-template-columns: 200px;
+	
+	header{
+	grid-area: header;
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+	@include Bg;
+	}
+	
+	.menú{
+		grid-area: menú;
+		background-color: rgb(39, 38, 38);
+
+    /* Inicio elementos de menú */
+.Enlaces {
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  .ElementLi {
+	display: inline;
+	padding: 15px;
+  }
+  
+  .Link{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  bottom: 1px;
+  font-family: "fuenteLink";
+  }
+  
+  .Link:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: rgb(7, 89, 241);
+	/*animacion de derecha a izquierda*/
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  .Link:hover:after {
+	/*animacion de izquierda a derecha*/
+	transform-origin: left;
+	transform: scaleX(1);
+  }
+  /* Final elementos de menú */
+	}
+	
+	.MainDS{
+		grid-area: MainDS;
+		background-image: url("../Imagenes/FondoDestinos/FondoDestinos.png");
+		@include Bg;
+		overflow-y: scroll;
+	}
+	
+	 footer{
+		grid-area: footer; 
+		background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+		@include Bg;
+	} 
+	/* ✅ Final de grid-container ✅  */
+	
+	
+	// ------------- ⭕MainDS⭕ -------------
+	.MainDS{
+		display: grid;
+		grid-template-areas: 
+		" TituloDes"
+	
+		" vacioMN2-1"
+		" Fila2MN"
+		" vacioMN2-2"
+		
+		" Fila3MN"
+		" vacioMN3-2"
+		
+		" Fila4MN"
+		" vacioMN4-2";
+		grid-template-rows: 65px 30px 460px 30px 460px 30px 460px 20px;
+		overflow-y: scroll;
+	
+		.TituloDes{
+			grid-area: TituloDes;
+
+			.TituloDS{
+				font-size: 50px;
+				font-family: "fuenteC";
+			}
+		}
+	
+		.vacioMN2-1{
+			grid-area: vacioMN2-1;
+		}
+	
+		.Fila2MN{
+			grid-area: Fila2MN;
+		}
+	
+		.vacioMN2-2{
+			grid-area: vacioMN2-2;
+		}
+	
+		.Fila3MN{
+			grid-area: Fila3MN;
+		}
+	
+		.vacioMN3-2{
+			grid-area: vacioMN3-2;
+		}
+	
+		.Fila4MN{
+			grid-area: Fila4MN;
+		}
+	
+		.vacioMN4-2{
+			grid-area: vacioMN4-2;
+		}
+	}
+	}
+// ------------- ⭕MainDS⭕ -------------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟐𝐌𝐍 --------
+/* ---------✅ Fila2MN ✅---------  */
+.Fila2MN{
+    display: grid;
+	grid-template-areas: " SpaceA2 Cont2 SpaceB2";
+	grid-template-columns: 1fr 12fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA2{
+	grid-area: SpaceA2;
+}
+
+.Cont2{
+    grid-area: Cont2;
+	border-radius: 50px;
+}
+
+.SpaceB2{
+	grid-area: SpaceB2;
+}
+}
+
+.Fila2MN:hover{
+    transform: scale(1.1);
+}
+
+/* ---------✅ Fila2MN ✅---------  */
+/* ---------⛔Cont2⛔---------  */
+.Cont2{
+    display: grid;
+	grid-template-areas: 
+	" IMG_Rec2"
+	" ColRec2";
+	grid-template-rows: 190px 270px;
+
+.IMG_Rec2{
+    grid-area: IMG_Rec2;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	background-image: url("../Imagenes/Destinos/Brasil-IMG.png");
+	@include Bg;
+}
+
+.ColRec2{
+	grid-area: ColRec2;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont2⛔---------  */
+/* ---------🔵ColRec2🔵---------  */
+.ColRec2{
+	display: grid;
+	grid-template-areas: 
+	" TextRec2"
+	" FilaCont2"
+	" FilaLink2";
+	grid-template-rows: 50px 170px 50px;
+
+.TextRec2{
+	grid-area: TextRec2;
+	background-color: map-get($coloresDes, IMG-TEXT);
+
+	.TituloPais2{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+
+.TituloRec2{
+	text-align: center;
+	font-size: 30px;
+}
+
+.TextRecsec{
+	font-size: 20px;
+}
+
+.FilaCont2{
+	grid-area: FilaCont2;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont2{
+		font-family: "fuenteP";
+		font-size: 15px;
+	}
+}
+
+.FilaLink2{
+	grid-area: FilaLink2;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio2{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟐𝐌𝐍 --------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟑𝐌𝐍--------
+/* ---------✅ Fila3MN ✅---------  */
+.Fila3MN{
+    display: grid;
+	grid-template-areas: " SpaceA3 Cont3 SpaceB3";
+	grid-template-columns: 1fr 12fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA3{
+	grid-area: SpaceA3;
+}
+
+.Cont3{
+    grid-area: Cont3;
+	border-radius: 50px;
+}
+
+.SpaceB3{
+	grid-area: SpaceB3;
+}
+}
+
+.Fila3MN:hover{
+    transform: scale(1.1);
+}
+
+/* ---------✅ Fila3MN ✅---------  */
+/* ---------⛔Cont3⛔---------  */
+.Cont3{
+    display: grid;
+	grid-template-areas: 
+	" IMG_Rec3"
+	" ColRec3";
+	grid-template-rows: 190px 270px;
+
+.IMG_Rec3{
+    grid-area: IMG_Rec3;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	background-image: url("../Imagenes/Destinos/Francia-IMG.png");
+	@include Bg;
+}
+
+.ColRec3{
+	grid-area: ColRec3;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont2⛔---------  */
+/* ---------🔵ColRec2🔵---------  */
+.ColRec3{
+	display: grid;
+	grid-template-areas: 
+	" TextRec3"
+	" FilaCont3"
+	" FilaLink3";
+	grid-template-rows: 50px 170px 50px;
+
+	.TextRec3{
+		grid-area: TextRec3;
+		background-color: map-get($coloresDes, IMG-TEXT);
+	
+		.TituloPais3{
+			text-align: center;
+			font-size: 35px;
+			font-family: "fuenteC";
+		}
+	}
+
+.TextRecsec3{
+	font-size: 20px;
+}
+
+.FilaCont3{
+	grid-area: FilaCont3;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont3{
+		font-family: "fuenteP";
+		font-size: 15px;
+	}
+}
+
+.FilaLink3{
+	grid-area: FilaLink3;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio3{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟑𝐌𝐍--------
+
+
+
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟒𝐌𝐍-------
+/* ---------✅ Fila4MN ✅---------  */
+.Fila4MN{
+    display: grid;
+	grid-template-areas: " SpaceA4 Cont4 SpaceB4";
+	grid-template-columns: 1fr 12fr 1fr;
+	transition: 0.5s;
+	object-fit: cover;
+
+.SpaceA4{
+	grid-area: SpaceA4;
+}
+
+.Cont4{
+    grid-area: Cont4;
+	border-radius: 50px;
+}
+
+.SpaceB4{
+	grid-area: SpaceB4;
+}
+}
+
+.Fila4MN:hover{
+    transform: scale(1.1);
+}
+
+/* ---------✅ Fila3MN ✅---------  */
+/* ---------⛔Cont3⛔---------  */
+.Cont4{
+    display: grid;
+	grid-template-areas: 
+	" IMG_Rec4"
+	" ColRec4";
+	grid-template-rows: 190px 270px;
+
+.IMG_Rec4{
+    grid-area: IMG_Rec4;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	background-image: url("../Imagenes/Destinos/USA-IMG.png");
+	@include Bg;
+}
+
+.ColRec4{
+	grid-area: ColRec4;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+}
+/* ---------⛔Cont2⛔---------  */
+/* ---------🔵ColRec2🔵---------  */
+.ColRec4{
+	display: grid;
+	grid-template-areas: 
+	" TextRec4"
+	" FilaCont4"
+	" FilaLink4";
+	grid-template-rows: 50px 170px 50px;
+
+.TextRec4{
+	grid-area: TextRec4;
+	background-color: map-get($coloresDes, IMG-TEXT);
+
+	.TituloPais4{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+
+.TituloRec4{
+	text-align: center;
+	font-size: 30px;
+}
+
+.TextRecsec4{
+	font-size: 20px;
+}
+
+.FilaCont4{
+	grid-area: FilaCont4;
+	background-color: map-get($coloresDes, FilaCnt);
+
+	.TextCont4{
+		font-family: "fuenteP";
+		font-size: 15px;
+	}
+}
+
+.FilaLink4{
+	grid-area: FilaLink4;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	background-color: map-get($coloresDes, FilaLK);
+
+	.TituloPrecio4{
+		text-align: center;
+		font-size: 35px;
+		font-family: "fuenteC";
+	}
+}
+}
+/* ---------🔵ColRec🔵---------  */
+// --------𝐂𝐎𝐒𝐀𝐒 𝐃𝐄 𝐅𝐈𝐋𝐀𝟒𝐌𝐍--------
+}
+// ----------------------- ✅Media query MOBILE✅ -----------------------
