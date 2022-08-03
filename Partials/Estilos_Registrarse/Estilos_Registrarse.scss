@@ -1,0 +1,378 @@
+@mixin Bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// ----------------------- ✅Media query PC✅ -----------------------
+@media screen and (min-width: 1200px) {
+
+/* 📛Inicio de grid-containerCon📛 */
+.grid-containerCon {
+	height: 100vh;
+	display: grid;
+	grid-template-areas: 
+	" header header header"
+	" menú menú menú"
+	" mainCon mainCon mainCon"
+	" footer footer footer";
+	grid-template-rows: 80px 50px 569px 90px;
+	grid-template-columns: 200px;
+
+header{
+    grid-area: header;
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+	@include Bg;
+}
+
+.menú{
+    grid-area: menú;
+	background-color: rgb(39, 38, 38);
+
+/* Inicio elementos de menú */
+.Enlaces {
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  .ElementLi {
+	display: inline;
+	padding: 15px;
+  }
+  
+  .Link{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  bottom: 1px;
+  font-family: "fuenteLink";
+  }
+  
+  .Link:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: rgb(7, 89, 241);
+	/*animacion de derecha a izquierda*/
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  .Link:hover:after {
+	/*animacion de izquierda a derecha*/
+	transform-origin: left;
+	transform: scaleX(1);
+  }
+  /* Final elementos de menú */
+}
+
+ .mainCon{
+	grid-area: mainCon;
+	background-image: url("../Imagenes/FondoRegistrarse/FondoRegistrarse.png");
+	@include Bg;
+}
+
+ footer{
+    grid-area: footer; 
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+	@include Bg;
+} 
+
+}
+/* 📛Final de grid-containerCon📛  */
+
+
+// ------------- ⭕MainCon⭕ -------------
+.mainCon {
+	display: grid;
+	grid-template-areas: 
+	" TituloRes"
+    " Form";
+	grid-template-rows: 60px 530px;
+    overflow-y: scroll;
+
+    .TituloRes{
+        grid-area: TituloRes;
+
+    .TituloCon{
+        font-size: 50px;
+		font-family: "fuenteC";
+    }
+}
+
+    .Formulario{
+        grid-area: Form;
+
+/* ----⛔Cosas de Form⛔---- */
+.TituloForm {
+	font-family: "fuenteC";
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+}
+
+.TituloSecForm{
+	font-family: "fuenteC";
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.Bar{
+	background-color: rgb(228, 228, 228);
+	border-radius: 10px;
+	width: 300px;
+	height: 30px;
+    border: solid black 3px;
+}
+
+::placeholder{
+	color: rgb(0, 0, 0);
+	text-align: center;
+	font-size: 15px;
+	font-family: "FuenteSecundaria";
+}
+
+.options{
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	font-family: "FuenteSecundaria";
+}
+
+.BtEnviar{
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	border: solid black 3px;
+	background-color: rgb(0, 255, 255);
+}
+
+.fieldsetFORM{
+	border: solid black 3px;
+}
+/* ----⛔Cosas de Form⛔---- */
+
+    }
+}
+// ------------- ⭕MainCon⭕ -------------
+}
+// ----------------------- ✅Media query PC✅ -----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------- ✅Media query Mobile✅ -----------------------
+@media screen and (max-width: 768px) {
+
+/* 📛Inicio de grid-containerCon📛 */
+.grid-containerCon {
+	height: 100vh;
+	display: grid;
+	grid-template-areas: 
+	" header header header"
+	" menú menú menú"
+	" mainCon mainCon mainCon"
+	" footer footer footer";
+	grid-template-rows: 80px 50px 569px 90px;
+	grid-template-columns: 200px;
+
+header{
+    grid-area: header;
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+	@include Bg;
+}
+
+.menú{
+    grid-area: menú;
+	background-color: rgb(39, 38, 38);
+
+	/* Inicio elementos de menú */
+.Enlaces {
+	display: flex;
+	justify-content: space-evenly;
+  }
+  
+  .ElementLi {
+	display: inline;
+	padding: 15px;
+  }
+  
+  .Link{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  bottom: 1px;
+  font-family: "fuenteLink";
+  }
+  
+  .Link:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background: rgb(7, 89, 241);
+	/*animacion de derecha a izquierda*/
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform 0.2s ease-in-out;
+  }
+  
+  .Link:hover:after {
+	/*animacion de izquierda a derecha*/
+	transform-origin: left;
+	transform: scaleX(1);
+  }
+  /* Final elementos de menú */
+}
+
+ .mainCon{
+	grid-area: mainCon;
+	background-image: url("../Imagenes/FondoRegistrarse/FondoRegistrarse.png");
+	@include Bg;
+}
+
+ footer{
+    grid-area: footer; 
+	background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+	@include Bg;
+} 
+
+}
+/* 📛Final de grid-containerCon📛  */
+
+// ------------- ⭕MainCon⭕ -------------
+.mainCon {
+	display: grid;
+	grid-template-areas: 
+	" TituloRes"
+    " Form";
+	grid-template-rows: 65px 530px;
+    overflow-y: scroll;
+
+    .TituloRes{
+        grid-area: TituloRes;
+
+		.TituloCon{
+			font-size: 50px;
+			font-family: "fuenteC";
+		}
+    }
+
+    .Formulario{
+        grid-area: Form;
+
+/* ----⛔Cosas de Form⛔---- */
+.TituloForm {
+	font-family: "fuenteC";
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+}
+
+.TituloSecForm{
+	font-family: "fuenteC";
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.Bar{
+	background-color: rgb(228, 228, 228);
+	border-radius: 10px;
+	width: 300px;
+	height: 30px;
+    border: solid black 3px;
+}
+
+::placeholder{
+	color: rgb(0, 0, 0);
+	text-align: center;
+	font-size: 15px;
+	font-family: "FuenteSecundaria";
+}
+
+.options{
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	font-family: "FuenteSecundaria";
+}
+
+.BtEnviar{
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	border: solid black 3px;
+	background-color: rgb(0, 255, 255);
+}
+
+.fieldsetFORM{
+	border: solid black 3px;
+}
+/* ----⛔Cosas de Form⛔---- */
+
+    }
+}
+// ------------- ⭕MainCon⭕ -------------
+
+}
+// ----------------------- ✅Media query Mobile✅ -----------------------
