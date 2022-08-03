@@ -1,0 +1,377 @@
+@mixin Bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// ----------------------- ✅Media query PC✅ -----------------------
+@media screen and (min-width: 1200px) {
+.main {
+	display: grid;
+	grid-template-areas: 
+	" FilaTitulo"
+    " Espacio"
+    " FilaANM";
+	grid-template-rows: 150px 220px 190px;
+
+    .FilaTitulo{
+        grid-area: FilaTitulo;
+
+        .TituloInicio{
+            font-size: 75px;
+            text-align: center;
+            font-family: "fuenteV";
+            margin-top: 20px;
+        }
+    }
+
+    .Espacio{
+        grid-area: Espacio;
+    }
+
+    .FilaANM{
+        grid-area: FilaANM;
+    }
+
+// ------------- 🔘FilaANM🔘 -------------
+    .FilaANM{
+        display: grid;
+        grid-template-areas: 
+	    " ColAN1 ColAN2 ColAN3";
+        grid-template-columns: 8fr 1fr 8fr;
+
+// ------------- 🔵ColAN1🔵 -------------
+        .ColAN1{
+            grid-area: ColAN1;
+            
+            .IMG1{
+                position: relative;
+                left: 470px;
+                top: 20px;
+                height: 150px;
+                width: 150px;
+                background-image: url("../Imagenes/IMG-Inicio/IMG1.png");
+	            @include Bg;
+            }
+
+/* --------------🌐Animación🌐-------------- */
+.IMG1:hover {
+	animation: batir 0.5s; 
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes batir {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+     20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    } 
+}
+/* --------------🌐Animación🌐-------------- */
+}
+// ------------- 🔵ColAN1🔵 -------------
+
+// ------------- 🔵ColAN2🔵 -------------
+        .ColAN2{
+            grid-area: ColAN2;
+        }
+// ------------- 🔵ColAN2🔵 -------------
+
+// ------------- 🔵ColAN3🔵 -------------
+        .ColAN3{
+            grid-area: ColAN3;
+
+            .IMG2{
+                position: relative;
+                left: 140px;
+                top: 20px;
+                height: 160px;
+                width: 150px;
+                background-image: url("../Imagenes/IMG-Inicio/IMG2.png");
+	            @include Bg;
+            }
+
+/* --------------🌐Animación🌐-------------- */
+.IMG2:hover {
+	animation: batir 0.5s; 
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes batir {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+     20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    } 
+}
+/* --------------🌐Animación🌐-------------- */
+}
+// ------------- 🔵ColAN3🔵 -------------
+    }
+// ------------- 🔘FilaANM🔘 -------------
+
+}
+}
+// ----------------------- ✅Media query PC✅ -----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------- ✅Media query Mobile✅ -----------------------
+@media screen and (max-width: 768px) {
+    .main {
+        display: grid;
+        grid-template-areas: 
+        " FilaTitulo"
+        " Espacio"
+        " FilaANM";
+        grid-template-rows: 250px 120px 200px;
+    
+        .FilaTitulo{
+            grid-area: FilaTitulo;
+    
+            .TituloInicio{
+                font-size: 55px;
+                text-align: center;
+                font-family: "fuenteV";
+                margin-top: 20px;
+            }
+        }
+    
+        .Espacio{
+            grid-area: Espacio;
+        }
+    
+        .FilaANM{
+            grid-area: FilaANM;
+        }
+
+// ------------- 🔘FilaANM🔘 -------------
+        .FilaANM{
+            display: grid;
+            grid-template-areas: 
+            " ColAN1 ColAN2 ColAN3";
+            grid-template-columns: 200px 1fr 200px;
+    
+// ------------- 🔵ColAN1🔵 -------------
+            .ColAN1{
+                grid-area: ColAN1;
+
+                .IMG1{
+                    position: relative;
+                    left: 33px;
+                    top: 35px;
+                    height: 130px;
+                    width: 130px;
+                    background-image: url("../Imagenes/IMG-Inicio/IMG1.png");
+	                @include Bg;
+                }
+/* --------------🌐Animación🌐-------------- */
+.IMG1:hover {
+	animation: batir 0.5s; 
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes batir {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+     20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    } 
+}
+/* --------------🌐Animación🌐-------------- */
+}
+// ------------- 🔵ColAN1🔵 -------------
+
+// ------------- 🔵ColAN2🔵 -------------
+            .ColAN2{
+                grid-area: ColAN2;
+            }
+// ------------- 🔵ColAN2🔵 -------------
+
+// ------------- 🔵ColAN3🔵 -------------
+            .ColAN3{
+                grid-area: ColAN3;
+
+                .IMG2{
+                    position: relative;
+                    left: 33px;
+                    top: 35px;
+                    height: 140px;
+                    width: 130px;
+                    background-image: url("../Imagenes/IMG-Inicio/IMG2.png");
+	                @include Bg;
+                }
+                /* --------------🌐Animación🌐-------------- */
+.IMG2:hover {
+	animation: batir 0.5s; 
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes batir {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+     20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    } 
+}
+/* --------------🌐Animación🌐-------------- */
+}
+// ------------- 🔵ColAN3🔵 -------------
+        }
+// ------------- 🔘FilaANM🔘 -------------
+
+    }
+    }
+// ----------------------- ✅Media query Mobile✅ -----------------------
