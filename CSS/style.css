@@ -1,0 +1,1137 @@
+@charset "UTF-8";
+/* Inicio del reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* Final del reset */
+/* ✅ Inicio de grid-container ✅  */
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: " header header header"
+ " menú menú menú"
+ " main main main"
+ " footer footer footer";
+  grid-template-rows: 80px 50px 569px 90px;
+  grid-template-columns: 200px; }
+  .grid-container header {
+    grid-area: header;
+    background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid-container .menú {
+    grid-area: menú;
+    background-color: #272626;
+    /* Inicio elementos de menú */
+    /* Final elementos de menú */ }
+    .grid-container .menú .Enlaces {
+      display: flex;
+      justify-content: space-evenly; }
+    .grid-container .menú .ElementLi {
+      display: inline;
+      padding: 15px; }
+    .grid-container .menú .Link {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      position: relative;
+      bottom: 1px;
+      font-family: "fuenteLink"; }
+    .grid-container .menú .Link:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: #0759f1;
+      /*animacion de derecha a izquierda*/
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out; }
+    .grid-container .menú .Link:hover:after {
+      /*animacion de izquierda a derecha*/
+      transform-origin: left;
+      transform: scaleX(1); }
+  .grid-container .main {
+    grid-area: main;
+    background-image: url("../Imagenes/FondoInicio/FondoInicio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .grid-container footer {
+    grid-area: footer;
+    background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+
+/* ✅ Final de grid-container ✅  */
+@font-face {
+  font-family: "fuenteV";
+  src: url("../Fuentes/Cocogoose Pro Semilight Italic-trial.ttf"); }
+
+@font-face {
+  font-family: "fuenteC";
+  src: url("../Fuentes/coolvetica.otf"); }
+
+@font-face {
+  font-family: "fuenteP";
+  src: url("../Fuentes/RomanSerif.ttf"); }
+
+@font-face {
+  font-family: "fuenteLink";
+  src: url("../Fuentes/Cocogoose Pro Bold-trial.ttf"); }
+
+@media screen and (min-width: 1200px) {
+  .main {
+    display: grid;
+    grid-template-areas: " FilaTitulo"
+ " Espacio"
+ " FilaANM";
+    grid-template-rows: 150px 220px 190px; }
+    .main .FilaTitulo {
+      grid-area: FilaTitulo; }
+      .main .FilaTitulo .TituloInicio {
+        font-size: 75px;
+        text-align: center;
+        font-family: "fuenteV";
+        margin-top: 20px; }
+    .main .Espacio {
+      grid-area: Espacio; }
+    .main .FilaANM {
+      grid-area: FilaANM; }
+    .main .FilaANM {
+      display: grid;
+      grid-template-areas: " ColAN1 ColAN2 ColAN3";
+      grid-template-columns: 8fr 1fr 8fr; }
+      .main .FilaANM .ColAN1 {
+        grid-area: ColAN1;
+        /* --------------🌐Animación🌐-------------- */
+        /* --------------🌐Animación🌐-------------- */ }
+        .main .FilaANM .ColAN1 .IMG1 {
+          position: relative;
+          left: 470px;
+          top: 20px;
+          height: 150px;
+          width: 150px;
+          background-image: url("../Imagenes/IMG-Inicio/IMG1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .main .FilaANM .ColAN1 .IMG1:hover {
+          animation: batir 0.5s;
+          animation-iteration-count: infinite; }
+  @keyframes batir {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg); }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg); }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg); }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg); }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg); }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg); }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg); }
+    80% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    90% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg); } }
+      .main .FilaANM .ColAN2 {
+        grid-area: ColAN2; }
+      .main .FilaANM .ColAN3 {
+        grid-area: ColAN3;
+        /* --------------🌐Animación🌐-------------- */
+        /* --------------🌐Animación🌐-------------- */ }
+        .main .FilaANM .ColAN3 .IMG2 {
+          position: relative;
+          left: 140px;
+          top: 20px;
+          height: 160px;
+          width: 150px;
+          background-image: url("../Imagenes/IMG-Inicio/IMG2.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .main .FilaANM .ColAN3 .IMG2:hover {
+          animation: batir 0.5s;
+          animation-iteration-count: infinite; }
+  @keyframes batir {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg); }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg); }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg); }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg); }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg); }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg); }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg); }
+    80% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    90% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg); } } }
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-areas: " FilaTitulo"
+ " Espacio"
+ " FilaANM";
+    grid-template-rows: 250px 120px 200px; }
+    .main .FilaTitulo {
+      grid-area: FilaTitulo; }
+      .main .FilaTitulo .TituloInicio {
+        font-size: 55px;
+        text-align: center;
+        font-family: "fuenteV";
+        margin-top: 20px; }
+    .main .Espacio {
+      grid-area: Espacio; }
+    .main .FilaANM {
+      grid-area: FilaANM; }
+    .main .FilaANM {
+      display: grid;
+      grid-template-areas: " ColAN1 ColAN2 ColAN3";
+      grid-template-columns: 200px 1fr 200px; }
+      .main .FilaANM .ColAN1 {
+        grid-area: ColAN1;
+        /* --------------🌐Animación🌐-------------- */
+        /* --------------🌐Animación🌐-------------- */ }
+        .main .FilaANM .ColAN1 .IMG1 {
+          position: relative;
+          left: 33px;
+          top: 35px;
+          height: 130px;
+          width: 130px;
+          background-image: url("../Imagenes/IMG-Inicio/IMG1.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .main .FilaANM .ColAN1 .IMG1:hover {
+          animation: batir 0.5s;
+          animation-iteration-count: infinite; }
+  @keyframes batir {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg); }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg); }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg); }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg); }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg); }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg); }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg); }
+    80% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    90% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg); } }
+      .main .FilaANM .ColAN2 {
+        grid-area: ColAN2; }
+      .main .FilaANM .ColAN3 {
+        grid-area: ColAN3;
+        /* --------------🌐Animación🌐-------------- */
+        /* --------------🌐Animación🌐-------------- */ }
+        .main .FilaANM .ColAN3 .IMG2 {
+          position: relative;
+          left: 33px;
+          top: 35px;
+          height: 140px;
+          width: 130px;
+          background-image: url("../Imagenes/IMG-Inicio/IMG2.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center; }
+        .main .FilaANM .ColAN3 .IMG2:hover {
+          animation: batir 0.5s;
+          animation-iteration-count: infinite; }
+  @keyframes batir {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg); }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg); }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg); }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg); }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg); }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg); }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg); }
+    80% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    90% {
+      transform: translate(-1px, 2px) rotate(-1deg); }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg); } } }
+
+@media screen and (min-width: 1200px) {
+  /* 📛Inicio de grid-containerCon📛 */
+  .grid-containerCon {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: " header header header"
+ " menú menú menú"
+ " mainCon mainCon mainCon"
+ " footer footer footer";
+    grid-template-rows: 80px 50px 569px 90px;
+    grid-template-columns: 200px; }
+    .grid-containerCon header {
+      grid-area: header;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerCon .menú {
+      grid-area: menú;
+      background-color: #272626;
+      /* Inicio elementos de menú */
+      /* Final elementos de menú */ }
+      .grid-containerCon .menú .Enlaces {
+        display: flex;
+        justify-content: space-evenly; }
+      .grid-containerCon .menú .ElementLi {
+        display: inline;
+        padding: 15px; }
+      .grid-containerCon .menú .Link {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        position: relative;
+        bottom: 1px;
+        font-family: "fuenteLink"; }
+      .grid-containerCon .menú .Link:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #0759f1;
+        /*animacion de derecha a izquierda*/
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out; }
+      .grid-containerCon .menú .Link:hover:after {
+        /*animacion de izquierda a derecha*/
+        transform-origin: left;
+        transform: scaleX(1); }
+    .grid-containerCon .mainCon {
+      grid-area: mainCon;
+      background-image: url("../Imagenes/FondoRegistrarse/FondoRegistrarse.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerCon footer {
+      grid-area: footer;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+  /* 📛Final de grid-containerCon📛  */
+  .mainCon {
+    display: grid;
+    grid-template-areas: " TituloRes"
+ " Form";
+    grid-template-rows: 60px 530px;
+    overflow-y: scroll; }
+    .mainCon .TituloRes {
+      grid-area: TituloRes; }
+      .mainCon .TituloRes .TituloCon {
+        font-size: 50px;
+        font-family: "fuenteC"; }
+    .mainCon .Formulario {
+      grid-area: Form;
+      /* ----⛔Cosas de Form⛔---- */
+      /* ----⛔Cosas de Form⛔---- */ }
+      .mainCon .Formulario .TituloForm {
+        font-family: "fuenteC";
+        color: black;
+        font-size: 25px; }
+      .mainCon .Formulario .TituloSecForm {
+        font-family: "fuenteC";
+        color: black;
+        font-size: 17px;
+        font-weight: bold; }
+      .mainCon .Formulario .Bar {
+        background-color: #e4e4e4;
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+        border: solid black 3px; }
+      .mainCon .Formulario ::placeholder {
+        color: black;
+        text-align: center;
+        font-size: 15px;
+        font-family: "FuenteSecundaria"; }
+      .mainCon .Formulario .options {
+        color: black;
+        font-size: 15px;
+        font-family: "FuenteSecundaria"; }
+      .mainCon .Formulario .BtEnviar {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        border: solid black 3px;
+        background-color: cyan; }
+      .mainCon .Formulario .fieldsetFORM {
+        border: solid black 3px; } }
+
+@media screen and (max-width: 768px) {
+  /* 📛Inicio de grid-containerCon📛 */
+  .grid-containerCon {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: " header header header"
+ " menú menú menú"
+ " mainCon mainCon mainCon"
+ " footer footer footer";
+    grid-template-rows: 80px 50px 569px 90px;
+    grid-template-columns: 200px; }
+    .grid-containerCon header {
+      grid-area: header;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerCon .menú {
+      grid-area: menú;
+      background-color: #272626;
+      /* Inicio elementos de menú */
+      /* Final elementos de menú */ }
+      .grid-containerCon .menú .Enlaces {
+        display: flex;
+        justify-content: space-evenly; }
+      .grid-containerCon .menú .ElementLi {
+        display: inline;
+        padding: 15px; }
+      .grid-containerCon .menú .Link {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        position: relative;
+        bottom: 1px;
+        font-family: "fuenteLink"; }
+      .grid-containerCon .menú .Link:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #0759f1;
+        /*animacion de derecha a izquierda*/
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out; }
+      .grid-containerCon .menú .Link:hover:after {
+        /*animacion de izquierda a derecha*/
+        transform-origin: left;
+        transform: scaleX(1); }
+    .grid-containerCon .mainCon {
+      grid-area: mainCon;
+      background-image: url("../Imagenes/FondoRegistrarse/FondoRegistrarse.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerCon footer {
+      grid-area: footer;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+  /* 📛Final de grid-containerCon📛  */
+  .mainCon {
+    display: grid;
+    grid-template-areas: " TituloRes"
+ " Form";
+    grid-template-rows: 65px 530px;
+    overflow-y: scroll; }
+    .mainCon .TituloRes {
+      grid-area: TituloRes; }
+      .mainCon .TituloRes .TituloCon {
+        font-size: 50px;
+        font-family: "fuenteC"; }
+    .mainCon .Formulario {
+      grid-area: Form;
+      /* ----⛔Cosas de Form⛔---- */
+      /* ----⛔Cosas de Form⛔---- */ }
+      .mainCon .Formulario .TituloForm {
+        font-family: "fuenteC";
+        color: black;
+        font-size: 25px; }
+      .mainCon .Formulario .TituloSecForm {
+        font-family: "fuenteC";
+        color: black;
+        font-size: 17px;
+        font-weight: bold; }
+      .mainCon .Formulario .Bar {
+        background-color: #e4e4e4;
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+        border: solid black 3px; }
+      .mainCon .Formulario ::placeholder {
+        color: black;
+        text-align: center;
+        font-size: 15px;
+        font-family: "FuenteSecundaria"; }
+      .mainCon .Formulario .options {
+        color: black;
+        font-size: 15px;
+        font-family: "FuenteSecundaria"; }
+      .mainCon .Formulario .BtEnviar {
+        width: 200px;
+        height: 30px;
+        border-radius: 10px;
+        border: solid black 3px;
+        background-color: cyan; }
+      .mainCon .Formulario .fieldsetFORM {
+        border: solid black 3px; } }
+
+@media screen and (min-width: 1200px) {
+  /* ✅ Inicio de grid-container ✅  */
+  .grid-containerDS {
+    display: grid;
+    grid-template-areas: " header header header"
+ " menú menú menú"
+ " MainDS MainDS MainDS"
+ " footer footer footer";
+    grid-template-rows: 80px 50px 569px 90px;
+    grid-template-columns: 200px;
+    /* ✅ Final de grid-container ✅  */ }
+    .grid-containerDS header {
+      grid-area: header;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerDS .menú {
+      grid-area: menú;
+      background-color: #272626;
+      /* Inicio elementos de menú */
+      /* Final elementos de menú */ }
+      .grid-containerDS .menú .Enlaces {
+        display: flex;
+        justify-content: space-evenly; }
+      .grid-containerDS .menú .ElementLi {
+        display: inline;
+        padding: 15px; }
+      .grid-containerDS .menú .Link {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        position: relative;
+        bottom: 1px;
+        font-family: "fuenteLink"; }
+      .grid-containerDS .menú .Link:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #0759f1;
+        /*animacion de derecha a izquierda*/
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out; }
+      .grid-containerDS .menú .Link:hover:after {
+        /*animacion de izquierda a derecha*/
+        transform-origin: left;
+        transform: scaleX(1); }
+    .grid-containerDS .MainDS {
+      grid-area: MainDS;
+      background-image: url("../Imagenes/FondoDestinos/FondoDestinos.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow-y: scroll; }
+    .grid-containerDS footer {
+      grid-area: footer;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerDS .MainDS {
+      display: grid;
+      grid-template-areas: " TituloDes"
+  " vacioMN2-1"
+ " Fila2MN"
+ " vacioMN2-2"
+  " Fila3MN"
+ " vacioMN3-2"
+  " Fila4MN"
+ " vacioMN4-2";
+      grid-template-rows: 60px 20px 280px 20px 280px 20px 280px 20px;
+      overflow-y: scroll; }
+      .grid-containerDS .MainDS .TituloDes {
+        grid-area: TituloDes; }
+        .grid-containerDS .MainDS .TituloDes .TituloDS {
+          font-size: 50px;
+          font-family: "fuenteC"; }
+      .grid-containerDS .MainDS .vacioMN2-1 {
+        grid-area: vacioMN2-1; }
+      .grid-containerDS .MainDS .Fila2MN {
+        grid-area: Fila2MN; }
+      .grid-containerDS .MainDS .vacioMN2-2 {
+        grid-area: vacioMN2-2; }
+      .grid-containerDS .MainDS .Fila3MN {
+        grid-area: Fila3MN; }
+      .grid-containerDS .MainDS .vacioMN3-2 {
+        grid-area: vacioMN3-2; }
+      .grid-containerDS .MainDS .Fila4MN {
+        grid-area: Fila4MN; }
+      .grid-containerDS .MainDS .vacioMN4-2 {
+        grid-area: vacioMN4-2; }
+  /* ---------✅ Fila2MN ✅---------  */
+  .Fila2MN {
+    display: grid;
+    grid-template-areas: " SpaceA2 Cont2 SpaceB2";
+    grid-template-columns: 1fr 5fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila2MN .SpaceA2 {
+      grid-area: SpaceA2; }
+      .Fila2MN .SpaceA2 .IMG-PC, .Fila2MN .SpaceA2 .Cont2 .IMG_Rec2, .Cont2 .Fila2MN .SpaceA2 .IMG_Rec2, .Fila2MN .SpaceA2 .Cont3 .IMG_Rec3, .Cont3 .Fila2MN .SpaceA2 .IMG_Rec3, .Fila2MN .SpaceA2 .Cont4 .IMG_Rec4, .Cont4 .Fila2MN .SpaceA2 .IMG_Rec4 {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px; }
+    .Fila2MN .Cont2 {
+      grid-area: Cont2;
+      border-radius: 50px; }
+    .Fila2MN .SpaceB2 {
+      grid-area: SpaceB2; }
+  .Fila2MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila2MN ✅---------  */
+  /* ---------⛔Cont2⛔---------  */
+  .Cont2 {
+    display: grid;
+    grid-template-areas: " IMG_Rec2 ColRec2";
+    grid-template-columns: 300px 831px; }
+    .Cont2 .IMG_Rec2 {
+      grid-area: IMG_Rec2;
+      background-color: #04ac6b;
+      background-image: url("../Imagenes/Destinos/Brasil-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont2 .ColRec2 {
+      grid-area: ColRec2;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont2⛔---------  */
+  /* ---------🔵ColRec2🔵---------  */
+  .ColRec2 {
+    display: grid;
+    grid-template-areas: " TextRec2"
+ " FilaCont2"
+ " FilaLink2";
+    grid-template-rows: 50px 190px 40px; }
+    .ColRec2 .TextRec2 {
+      grid-area: TextRec2;
+      border-top-right-radius: 30px;
+      background-color: #04ac6b; }
+      .ColRec2 .TextRec2 .TituloPais2 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec2 .TituloRec2 {
+      text-align: center;
+      font-size: 30px; }
+    .ColRec2 .TextRecsec {
+      font-size: 20px; }
+    .ColRec2 .FilaCont2 {
+      grid-area: FilaCont2;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec2 .FilaCont2 .TextCont2 {
+        font-size: 20px;
+        font-family: "fuenteP"; }
+    .ColRec2 .FilaLink2 {
+      grid-area: FilaLink2;
+      border-bottom-right-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec2 .FilaLink2 .TituloPrecio2 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */
+  /* ---------✅ Fila3MN ✅---------  */
+  .Fila3MN {
+    display: grid;
+    grid-template-areas: " SpaceA3 Cont3 SpaceB3";
+    grid-template-columns: 1fr 5fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila3MN .SpaceA3 {
+      grid-area: SpaceA3; }
+    .Fila3MN .Cont3 {
+      grid-area: Cont3;
+      border-radius: 50px; }
+    .Fila3MN .SpaceB3 {
+      grid-area: SpaceB3; }
+  .Fila3MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila3MN ✅---------  */
+  /* ---------⛔Cont3⛔---------  */
+  .Cont3 {
+    display: grid;
+    grid-template-areas: " IMG_Rec3 ColRec3";
+    grid-template-columns: 300px 831px; }
+    .Cont3 .IMG_Rec3 {
+      grid-area: IMG_Rec3;
+      background-color: #04ac6b;
+      background-image: url("../Imagenes/Destinos/Francia-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont3 .ColRec3 {
+      grid-area: ColRec3;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont3⛔---------  */
+  /* ---------🔵ColRec3🔵---------  */
+  .ColRec3 {
+    display: grid;
+    grid-template-areas: " TextRec3"
+ " FilaCont3"
+ " FilaLink3";
+    grid-template-rows: 50px 190px 40px; }
+    .ColRec3 .TextRec3 {
+      grid-area: TextRec3;
+      border-top-right-radius: 30px;
+      background-color: #04ac6b; }
+      .ColRec3 .TextRec3 .TituloPais3 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec3 .TituloRec3 {
+      text-align: center;
+      font-size: 30px; }
+    .ColRec3 .TextRecsec3 {
+      font-size: 20px; }
+    .ColRec3 .FilaCont3 {
+      grid-area: FilaCont3;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec3 .FilaCont3 .TextCont3 {
+        font-size: 20px;
+        font-family: "fuenteP"; }
+    .ColRec3 .FilaLink3 {
+      grid-area: FilaLink3;
+      border-bottom-right-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec3 .FilaLink3 .TituloPrecio3 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */
+  /* ---------✅ Fila4MN ✅---------  */
+  .Fila4MN {
+    display: grid;
+    grid-template-areas: " SpaceA4 Cont4 SpaceB4";
+    grid-template-columns: 1fr 5fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila4MN .SpaceA4 {
+      grid-area: SpaceA4; }
+    .Fila4MN .Cont4 {
+      grid-area: Cont4;
+      border-radius: 50px; }
+    .Fila4MN .SpaceB4 {
+      grid-area: SpaceB4; }
+  .Fila4MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila4MN ✅---------  */
+  /* ---------⛔Cont4⛔---------  */
+  .Cont4 {
+    display: grid;
+    grid-template-areas: " IMG_Rec4 ColRec4";
+    grid-template-columns: 300px 831px; }
+    .Cont4 .IMG_Rec4 {
+      grid-area: IMG_Rec4;
+      background-color: #04ac6b;
+      background-image: url("../Imagenes/Destinos/USA-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont4 .ColRec4 {
+      grid-area: ColRec4;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont4⛔---------  */
+  /* ---------🔵ColRec4🔵---------  */
+  .ColRec4 {
+    display: grid;
+    grid-template-areas: " TextRec4"
+ " FilaCont4"
+ " FilaLink4";
+    grid-template-rows: 50px 190px 40px; }
+    .ColRec4 .TextRec4 {
+      grid-area: TextRec4;
+      border-top-right-radius: 30px;
+      background-color: #04ac6b; }
+      .ColRec4 .TextRec4 .TituloPais4 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec4 .TituloRec4 {
+      text-align: center;
+      font-size: 30px; }
+    .ColRec4 .TextRecsec4 {
+      font-size: 20px; }
+    .ColRec4 .FilaCont4 {
+      grid-area: FilaCont4;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec4 .FilaCont4 .TextCont4 {
+        font-size: 20px;
+        font-family: "fuenteP"; }
+    .ColRec4 .FilaLink4 {
+      grid-area: FilaLink4;
+      border-bottom-right-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec4 .FilaLink4 .TituloPrecio4 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */ }
+
+@media screen and (max-width: 768px) {
+  /* ✅ Inicio de grid-container ✅  */
+  .grid-containerDS {
+    display: grid;
+    grid-template-areas: " header header header"
+ " menú menú menú"
+ " MainDS MainDS MainDS"
+ " footer footer footer";
+    grid-template-rows: 80px 50px 569px 90px;
+    grid-template-columns: 200px;
+    /* ✅ Final de grid-container ✅  */ }
+    .grid-containerDS header {
+      grid-area: header;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaHeader.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerDS .menú {
+      grid-area: menú;
+      background-color: #272626;
+      /* Inicio elementos de menú */
+      /* Final elementos de menú */ }
+      .grid-containerDS .menú .Enlaces {
+        display: flex;
+        justify-content: space-evenly; }
+      .grid-containerDS .menú .ElementLi {
+        display: inline;
+        padding: 15px; }
+      .grid-containerDS .menú .Link {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        position: relative;
+        bottom: 1px;
+        font-family: "fuenteLink"; }
+      .grid-containerDS .menú .Link:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #0759f1;
+        /*animacion de derecha a izquierda*/
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out; }
+      .grid-containerDS .menú .Link:hover:after {
+        /*animacion de izquierda a derecha*/
+        transform-origin: left;
+        transform: scaleX(1); }
+    .grid-containerDS .MainDS {
+      grid-area: MainDS;
+      background-image: url("../Imagenes/FondoDestinos/FondoDestinos.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow-y: scroll; }
+    .grid-containerDS footer {
+      grid-area: footer;
+      background-image: url("../Imagenes/Header-y-Footer/ExpediaFooter.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .grid-containerDS .MainDS {
+      display: grid;
+      grid-template-areas: " TituloDes"
+  " vacioMN2-1"
+ " Fila2MN"
+ " vacioMN2-2"
+  " Fila3MN"
+ " vacioMN3-2"
+  " Fila4MN"
+ " vacioMN4-2";
+      grid-template-rows: 65px 30px 460px 30px 460px 30px 460px 20px;
+      overflow-y: scroll; }
+      .grid-containerDS .MainDS .TituloDes {
+        grid-area: TituloDes; }
+        .grid-containerDS .MainDS .TituloDes .TituloDS {
+          font-size: 50px;
+          font-family: "fuenteC"; }
+      .grid-containerDS .MainDS .vacioMN2-1 {
+        grid-area: vacioMN2-1; }
+      .grid-containerDS .MainDS .Fila2MN {
+        grid-area: Fila2MN; }
+      .grid-containerDS .MainDS .vacioMN2-2 {
+        grid-area: vacioMN2-2; }
+      .grid-containerDS .MainDS .Fila3MN {
+        grid-area: Fila3MN; }
+      .grid-containerDS .MainDS .vacioMN3-2 {
+        grid-area: vacioMN3-2; }
+      .grid-containerDS .MainDS .Fila4MN {
+        grid-area: Fila4MN; }
+      .grid-containerDS .MainDS .vacioMN4-2 {
+        grid-area: vacioMN4-2; }
+  /* ---------✅ Fila2MN ✅---------  */
+  .Fila2MN {
+    display: grid;
+    grid-template-areas: " SpaceA2 Cont2 SpaceB2";
+    grid-template-columns: 1fr 12fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila2MN .SpaceA2 {
+      grid-area: SpaceA2; }
+    .Fila2MN .Cont2 {
+      grid-area: Cont2;
+      border-radius: 50px; }
+    .Fila2MN .SpaceB2 {
+      grid-area: SpaceB2; }
+  .Fila2MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila2MN ✅---------  */
+  /* ---------⛔Cont2⛔---------  */
+  .Cont2 {
+    display: grid;
+    grid-template-areas: " IMG_Rec2"
+ " ColRec2";
+    grid-template-rows: 190px 270px; }
+    .Cont2 .IMG_Rec2 {
+      grid-area: IMG_Rec2;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      background-image: url("../Imagenes/Destinos/Brasil-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont2 .ColRec2 {
+      grid-area: ColRec2;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont2⛔---------  */
+  /* ---------🔵ColRec2🔵---------  */
+  .ColRec2 {
+    display: grid;
+    grid-template-areas: " TextRec2"
+ " FilaCont2"
+ " FilaLink2";
+    grid-template-rows: 50px 170px 50px; }
+    .ColRec2 .TextRec2 {
+      grid-area: TextRec2;
+      background-color: #04ac6b; }
+      .ColRec2 .TextRec2 .TituloPais2 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec2 .TituloRec2 {
+      text-align: center;
+      font-size: 30px; }
+    .ColRec2 .TextRecsec {
+      font-size: 20px; }
+    .ColRec2 .FilaCont2 {
+      grid-area: FilaCont2;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec2 .FilaCont2 .TextCont2 {
+        font-family: "fuenteP";
+        font-size: 15px; }
+    .ColRec2 .FilaLink2 {
+      grid-area: FilaLink2;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec2 .FilaLink2 .TituloPrecio2 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */
+  /* ---------✅ Fila3MN ✅---------  */
+  .Fila3MN {
+    display: grid;
+    grid-template-areas: " SpaceA3 Cont3 SpaceB3";
+    grid-template-columns: 1fr 12fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila3MN .SpaceA3 {
+      grid-area: SpaceA3; }
+    .Fila3MN .Cont3 {
+      grid-area: Cont3;
+      border-radius: 50px; }
+    .Fila3MN .SpaceB3 {
+      grid-area: SpaceB3; }
+  .Fila3MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila3MN ✅---------  */
+  /* ---------⛔Cont3⛔---------  */
+  .Cont3 {
+    display: grid;
+    grid-template-areas: " IMG_Rec3"
+ " ColRec3";
+    grid-template-rows: 190px 270px; }
+    .Cont3 .IMG_Rec3 {
+      grid-area: IMG_Rec3;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      background-image: url("../Imagenes/Destinos/Francia-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont3 .ColRec3 {
+      grid-area: ColRec3;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont2⛔---------  */
+  /* ---------🔵ColRec2🔵---------  */
+  .ColRec3 {
+    display: grid;
+    grid-template-areas: " TextRec3"
+ " FilaCont3"
+ " FilaLink3";
+    grid-template-rows: 50px 170px 50px; }
+    .ColRec3 .TextRec3 {
+      grid-area: TextRec3;
+      background-color: #04ac6b; }
+      .ColRec3 .TextRec3 .TituloPais3 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec3 .TextRecsec3 {
+      font-size: 20px; }
+    .ColRec3 .FilaCont3 {
+      grid-area: FilaCont3;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec3 .FilaCont3 .TextCont3 {
+        font-family: "fuenteP";
+        font-size: 15px; }
+    .ColRec3 .FilaLink3 {
+      grid-area: FilaLink3;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec3 .FilaLink3 .TituloPrecio3 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */
+  /* ---------✅ Fila4MN ✅---------  */
+  .Fila4MN {
+    display: grid;
+    grid-template-areas: " SpaceA4 Cont4 SpaceB4";
+    grid-template-columns: 1fr 12fr 1fr;
+    transition: 0.5s;
+    object-fit: cover; }
+    .Fila4MN .SpaceA4 {
+      grid-area: SpaceA4; }
+    .Fila4MN .Cont4 {
+      grid-area: Cont4;
+      border-radius: 50px; }
+    .Fila4MN .SpaceB4 {
+      grid-area: SpaceB4; }
+  .Fila4MN:hover {
+    transform: scale(1.1); }
+  /* ---------✅ Fila3MN ✅---------  */
+  /* ---------⛔Cont3⛔---------  */
+  .Cont4 {
+    display: grid;
+    grid-template-areas: " IMG_Rec4"
+ " ColRec4";
+    grid-template-rows: 190px 270px; }
+    .Cont4 .IMG_Rec4 {
+      grid-area: IMG_Rec4;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      background-image: url("../Imagenes/Destinos/USA-IMG.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; }
+    .Cont4 .ColRec4 {
+      grid-area: ColRec4;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px; }
+  /* ---------⛔Cont2⛔---------  */
+  /* ---------🔵ColRec2🔵---------  */
+  .ColRec4 {
+    display: grid;
+    grid-template-areas: " TextRec4"
+ " FilaCont4"
+ " FilaLink4";
+    grid-template-rows: 50px 170px 50px; }
+    .ColRec4 .TextRec4 {
+      grid-area: TextRec4;
+      background-color: #04ac6b; }
+      .ColRec4 .TextRec4 .TituloPais4 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+    .ColRec4 .TituloRec4 {
+      text-align: center;
+      font-size: 30px; }
+    .ColRec4 .TextRecsec4 {
+      font-size: 20px; }
+    .ColRec4 .FilaCont4 {
+      grid-area: FilaCont4;
+      background-color: rgba(231, 231, 231, 0.788); }
+      .ColRec4 .FilaCont4 .TextCont4 {
+        font-family: "fuenteP";
+        font-size: 15px; }
+    .ColRec4 .FilaLink4 {
+      grid-area: FilaLink4;
+      border-bottom-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      background-color: #5ee404; }
+      .ColRec4 .FilaLink4 .TituloPrecio4 {
+        text-align: center;
+        font-size: 35px;
+        font-family: "fuenteC"; }
+  /* ---------🔵ColRec🔵---------  */ }
